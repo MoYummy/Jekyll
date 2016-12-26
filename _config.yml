@@ -5,7 +5,7 @@
 title: MoYummy's Blog
 email: mo_yummy@sina.cn
 description: > # this means to ignore newlines until "baseurl:"
-  Authored by Mo Yummy
+  Authored by Mo Yummy /
   Powered by Jekyll
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://moyummy.github.io/jekyll/" # the base hostname & protocol for your site, e.g. http://example.com
@@ -23,11 +23,10 @@ exclude:
 
 # Global
 timezone: Asia/Shanghai
-encoding: nil
 
 # Compile
 future: true
-lsi: true
+lsi: false
 limit_posts: 0
 
 # Service
