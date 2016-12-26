@@ -1,14 +1,3 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
@@ -17,6 +6,7 @@ title: MoYummy's Blog
 email: mo_yummy@sina.cn
 description: > # this means to ignore newlines until "baseurl:"
   Authored by Mo Yummy
+  Powered by Jekyll
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://moyummy.github.io/jekyll/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
@@ -30,3 +20,17 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+
+# Global
+timezone: Asia/Shanghai
+encoding: nil
+
+# Compile
+future: true
+lsi: true
+limit_posts: 0
+
+# Service
+port: 4001
+# baseurl: /
+# url: http://localhost:4001
