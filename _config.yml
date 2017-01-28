@@ -34,7 +34,7 @@ paginate_path: "page/:num"
 # Service
 port: 4002
 host: 127.0.0.1
-#baseurl: /
+baseurl: /jekyll/
 detach: false
 #url: http://localhost:4001
 
