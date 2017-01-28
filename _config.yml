@@ -1,35 +1,50 @@
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: MoYummy's Blog
-email: mo_yummy@sina.cn
-description: > # this means to ignore newlines until "baseurl:"
-  Authored by Mo Yummy /
-  Powered by Jekyll
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://moyummy.github.io/jekyll/" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  MoYummy
-
-# Build settings
-markdown: kramdown
-theme: minima
+# Gems
 gems:
   - jekyll-feed
-exclude:
-  - Gemfile
-  - Gemfile.lock
+  - jekyll-paginate
 
 # Global
+source: ./
+destination: ./_site
+safe: false
+include: 
+  [
+  ".htaccess"
+  ]
+exclude: 
+  [
+  vendor
+  Gemfile,
+  Gemfile.lock
+  ]
+keep_files: [".git", ".svn"]
 timezone: Asia/Shanghai
+#encoding: ENCODING
 
 # Compile
 future: true
 lsi: false
 limit_posts: 0
+#incremental: BOOL
+profile: false
+permalink: /:year/:month/:day/:title/
+paginate: 1
+paginate_path: "page/:num"
 
 # Service
-port: 4001
-# baseurl: /
-# url: http://localhost:4001
+port: 4002
+host: 127.0.0.1
+#baseurl: /
+detach: false
+#url: http://localhost:4001
+
+# Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Collections
+collections:
+  spare_collection:
+    output: true
+    permalink: /sparecollection/:path/
