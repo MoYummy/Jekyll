@@ -3,6 +3,10 @@ gems:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-octicons
+  - jekyll-github-metadata
+  - jekyll-sitemap
+  - jekyll-admin
+  - jekyll-assets
 
 # Global
 source: ./
@@ -36,6 +40,7 @@ paginate_path: "page/:num"
 port: 4002
 host: 127.0.0.1
 baseurl: "/jekyll-csdn"
+repository: "moyummy/jekyll-csdn"
 detach: false
 #url: http://localhost:4001
 
