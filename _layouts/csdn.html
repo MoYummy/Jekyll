@@ -1,6 +1,7 @@
 {% include header.html %}
     <link href="{{'/css/csdn.css' | relative_url}}" rel="stylesheet" type="text/css">
     <script src="http://cdn.bootcss.com/bootstrap-hover-dropdown/2.0.10/bootstrap-hover-dropdown.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-sidebar/3.3.2/jquery.sidebar.min.js"></script>
   </head>
   <body>
 
@@ -45,12 +46,12 @@
         <li class="dropdown">
           <a id="nav-action" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false"><span class="glyphicon glyphicon-edit"></span></a>
           <ul class="dropdown-menu" aria-labelledby="nav-action">
-            <li class="disabled"><a href="#"><span class="glyphicon glyphicon-blackboard"></span>传PPT/文档</a></li>
-            <li class="disabled"><a href="#"><span class="glyphicon glyphicon-comment"></span>提问题</a></li>
-            <li class="disabled"><a href="#"><span class="glyphicon glyphicon-edit"></span>写博客</a></li>
-            <li class="disabled"><a href="#"><span class="glyphicon glyphicon-cloud-upload"></span>传资源</a></li>
-            <li class="disabled"><a href="#"><span class="glyphicon glyphicon-file"></span>创建项目</a></li>
-            <li class="disabled"><a href="#"><span class="glyphicon glyphicon-console"></span>创建代码片</a></li>
+            <li class="disabled"><a href="#"><span class="glyphicon glyphicon-blackboard"></span> 传PPT/文档</a></li>
+            <li class="disabled"><a href="#"><span class="glyphicon glyphicon-comment"></span> 提问题</a></li>
+            <li class="disabled"><a href="#"><span class="glyphicon glyphicon-edit"></span> 写博客</a></li>
+            <li class="disabled"><a href="#"><span class="glyphicon glyphicon-cloud-upload"></span> 传资源</a></li>
+            <li class="disabled"><a href="#"><span class="glyphicon glyphicon-file"></span> 创建项目</a></li>
+            <li class="disabled"><a href="#"><span class="glyphicon glyphicon-console"></span> 创建代码片</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -102,5 +103,7 @@
 <div class="container">
   {{ content }}
 </div>
+
+<div class="sidebar left">Hello World</div>
 
 {% include footer.html %}

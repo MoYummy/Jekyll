@@ -1,12 +1,16 @@
 ---
 layout: csdn
 ---
-<ul>
+<div class="list-group">
   {% for post in site.posts %}
-    <li>
-      {{ post.date | date_to_string }}
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <div class="list-group-item row">
+      <a href="{{ post.url | relative_url }}"><h4>{{ post.title }}</h4></a>
       <p>{{ post.excerpt }}</p>
-    </li>
+      <div class="col-md-2 col-md-offset-7">{{ post.date | date_to_string }}</div>
+      <div class="col-md-3">
+        <span class="glyphicon glyphicon-search"></span> <a href="{{ post.url | relative_url }}">阅读 <span class="badge">100</span></a>
+        <span class="glyphicon glyphicon-comment"></span> 评论 <span class="badge">100</span>
+      </div>
+    </div>
   {% endfor %}
-</ul>
+</div>
