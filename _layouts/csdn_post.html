@@ -1,7 +1,44 @@
 ---
 layout: csdn
 ---
+<div class="page-header">
+  <h3>{{ page.title }}</h3>
+
+  <div class="row">
+    <div class="col-md-1">标签：</div>
+{% for tag in page.tags %}
+  <a href="#">{{ tag }}</a>
+{% endfor %}
+  </div>
+
+  <div class="row">
+    <div class="col-md-2 col-md-offset-7">{{ page.date | date_to_string }}</div>
+    <div class="col-md-1">100人阅读</div>
+    <div class="col-md-1">评论(100)</div>
+    <div class="col-md-1"><a href="#">收藏</a> <a href="#">举报</a></div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1">分类：</div>
+    <div class="col-md-5">
+{% for category in page.categories %}
+  <a href="#">{{ category }}</a>
+{% endfor %}
+    </div>
+  </div>
+
+</div>
 
 <div class="container">
   {{ content }}
 </div>
+
+<ul class="list-unstyled">
+{% if page.previous %}
+  <li><a href="{{page.previous.url|relative_url}}"><span class="glyphicon glyphicon-menu-up"></span> 上一篇 {{page.previous.title}}</a></li>
+{% endif %}
+
+{% if page.next %}
+  <li><a href="{{page.next.url|relative_url}}"><span class="glyphicon glyphicon-menu-down"></span> 下一篇 {{page.next.title}}</a></li>
+{% endif %}
+</ul>
