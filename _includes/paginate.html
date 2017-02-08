@@ -1,12 +1,4 @@
-{% for post in paginator.posts %}
-  <h1><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h1>
-  <p class="author">
-    <span class="date">{{ post.date }}</span>
-  </p>
-  <div class="content">
-    {{ post.excerpt }}
-  </div>
-{% endfor %}
+{% include paginate_content.html %}
 
 {% if paginator.total_pages > 1 %}
 <nav aria-label="Page navigation">

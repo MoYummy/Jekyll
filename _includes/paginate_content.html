@@ -1,8 +1,5 @@
----
-layout: csdn
----
 <div class="list-group">
-  {% for post in site.posts %}
+  {% for post in paginator.posts %}
     <div class="list-group-item row">
       <a href="{{ post.url | relative_url }}"><h1>{{ post.title }}</h1></a>
       <div class="content">{{ post.excerpt }}</div>
