@@ -7,7 +7,7 @@ layout: csdn
   <div class="row">
     <div class="col-md-1">标签：</div>
 {% for tag in page.tags %}
-  <a href="#">{{ tag }}</a>
+    <a class="label label-info" href="{{ tag | prepend: '/tag/' | relative_url }}">{{ tag }}</a>
 {% endfor %}
   </div>
 
@@ -22,7 +22,7 @@ layout: csdn
     <div class="col-md-1">分类：</div>
     <div class="col-md-5">
 {% for category in page.categories %}
-  <a href="#">{{ category }}</a>
+    <a class="label label-info" href="{{ category | prepend: '/category/' | relative_url }}">{{ category }}</a>
 {% endfor %}
     </div>
   </div>

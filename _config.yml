@@ -1,12 +1,13 @@
 # Gems
 gems:
-  - jekyll-feed
-  - jekyll-paginate
-  - jekyll-octicons
-  - jekyll-github-metadata
-  - jekyll-sitemap
   - jekyll-admin
+  - jekyll-archives
   - jekyll-assets
+  - jekyll-feed
+  - jekyll-github-metadata
+  - jekyll-octicons
+  - jekyll-paginate
+  - jekyll-sitemap
 
 # Global
 source: ./
@@ -18,9 +19,11 @@ include:
   ]
 exclude: 
   [
-  vendor
+  vendor,
   Gemfile,
-  Gemfile.lock
+  Gemfile.lock,
+  README.md,
+  LICENSE
   ]
 keep_files: [".git", ".svn"]
 timezone: Asia/Shanghai
@@ -54,3 +57,21 @@ collections:
   spare_collection:
     output: true
     permalink: /sparecollection/:path/
+
+# Archives
+jekyll-archives:
+  enabled:
+    - year
+    - month
+    - tags
+    - categories
+  layouts:
+    year: archives
+    month: archives
+    tag: archives
+    category: archives
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
