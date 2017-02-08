@@ -4,7 +4,7 @@ layout: csdn
 <div class="list-group">
   {% for post in site.posts %}
     <div class="list-group-item row">
-      <a href="{{ post.url | relative_url }}"><h1>{{ post.title }}</h1></a>
+      <a href="{{ post.url | relative_url }}" class="nounderline"><h1>{{ post.title }}</h1></a>
       <div class="content">{{ post.excerpt | strip_html }}</div>
       <div class="col-md-2 col-md-offset-7">
         <p class="author"><span class="date">{{ post.date | date_to_string }}</span></p>
