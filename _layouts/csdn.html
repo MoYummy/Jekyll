@@ -63,6 +63,8 @@
         <li class="dropdown">
           <a id="nav-menu" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
           <ul class="dropdown-menu" aria-labelledby="nav-menu">
+            <li><a href="{{ '/category' | relative_url }}">Categories</a></li>
+            <li><a href="{{ '/tag' | relative_url }}">Tags</a></li>
             <li class="disabled"><a>Placeholder</a></li>
           </ul>
         </li>
@@ -90,11 +92,11 @@
 
     <div id="csdn-navbar-second" class="collapse navbar-collapse">
       <form class="navbar-form navbar-right">
-        <a class="btn btn-primary" href="{{'/archive' | relative_url}}"><span class="glyphicon glyphicon-th-list"></span>目录视图</a>
-        <a class="btn btn-success" href="{{'/excerpt' | relative_url}}"><span class="glyphicon glyphicon-tasks"></span>摘要视图</a>
-        <a class="btn btn-info" href="{{ '/feed.xml' | relative_url }}">RSS订阅</a>
-        <a class="btn btn-warning" href="#" disabled="disabled"><span class="glyphicon glyphicon-cog"></span>管理博客</a>
-        <a class="btn btn-danger" href="#" disabled="disabled"><span class="glyphicon glyphicon-edit"></span>写新文章</a>
+        <a class="btn btn-primary" href="{{'/archive' | relative_url}}"><span class="glyphicon glyphicon-th-list"></span> 目录视图</a>
+        <a class="btn btn-success" href="{{'/excerpt' | relative_url}}"><span class="glyphicon glyphicon-tasks"></span> 摘要视图</a>
+        <a class="btn btn-info" href="{{ '/feed.xml' | relative_url }}"><span class="badge">RSS</span>订阅</a>
+        <a class="btn btn-warning" href="#" disabled="disabled"><span class="glyphicon glyphicon-cog"></span> 管理博客</a>
+        <a class="btn btn-danger" href="#" disabled="disabled"><span class="glyphicon glyphicon-edit"></span> 写新文章</a>
       </form>
     </div>
   </div>
