@@ -1,11 +1,12 @@
 ---
 layout: csdn
-title:  "About Me"
+title:  "About me"
 permalink: /about/
 ---
-
-{{site.data.author.name}}
-
-{{site.data.author.description}}
-
-<a href="{{'/'|relative_url}}">{{site.data.author.title}}</a>
+<div class="panel panel-default">
+  <div class="panel-heading"><h1>{{ page.title }}</h1></div>
+  <div class="panel-body">
+    {{site.data.author.name}}
+    <a href="{{'/'|relative_url}}">{{site.data.author.title}}</a>
+  </div>
+</div>

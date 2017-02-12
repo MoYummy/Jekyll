@@ -2,12 +2,12 @@
   <div class="panel-heading">个人资料</div>
   <div class="panel-body list-group">
     <li class="list-group-item">
-      <div class="thumbnail">
+      <a href="{{'/'|relative_url}}" class="thumbnail">
         <img src="{{ '/assets/logo.png' | relative_url }}">
-      </div>
+      </a>
       <div>{{site.data.author.name}}</div>
       <div>
-        <a class="label label-success"><span class="glyphicon glyphicon-plus"></span> 加关注</a>
+        <a href="https://github.com/{{site.data.author.github}}/{{site.data.author.repo}}" class="label label-success"><span class="glyphicon glyphicon-plus"></span> 加关注</a>
         <a class="label label-success"><span class="glyphicon glyphicon-home"></span> 发私信</a>
       </div>
     </li>
