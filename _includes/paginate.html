@@ -5,12 +5,12 @@
     {% if paginator.previous_page %}
     <li>
       <a href="{{ paginator.previous_page_path | relative_url }}" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
+        <span class="glyphicon glyphicon-backward" aria-hidden="true"></span>
       </a>
     </li>
     {% else %}
     <li class="disabled">
-      <span>&laquo;</span>
+      <span class="glyphicon glyphicon-backward" ></span>
     </li>
     {% endif %}
 
@@ -33,14 +33,23 @@
     {% if paginator.next_page %}
     <li>
       <a href="{{ paginator.next_page_path | relative_url }}" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
+        <span class="glyphicon glyphicon-forward" aria-hidden="true"></span>
+      </a>
+    </li>
+    <li>
+      <a href="{{ site.paginate_path | relative_url | replace: ':num', paginator.total_pages }}" aria-label="Last">
+        <span class="glyphicon glyphicon-step-forward"></span>
       </a>
     </li>
     {% else %}
     <li class="disabled">
-      <span>&raquo;</span>
+      <span class="glyphicon glyphicon-forward"></span>
+    </li>
+    <li class="disabled">
+      <span class="glyphicon glyphicon-step-forward"></span>
     </li>
     {% endif %}
+
   </ul>
 </nav>
 {% endif %}

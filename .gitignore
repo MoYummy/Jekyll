@@ -1,4 +1,5 @@
 docs
 Gemfile.lock
 .sass-cache
+.asset-cache
 .jekyll-metadata

@@ -1,0 +1,82 @@
+<div class="panel panel-default">
+  <div class="panel-heading">个人资料</div>
+  <div class="panel-body list-group">
+    <li class="list-group-item">
+      <div class="thumbnail">
+        <img src="{{ '/assets/logo.png' | relative_url }}">
+      </div>
+      <div>{{site.data.author.name}}</div>
+      <div>
+        <a class="label label-success"><span class="glyphicon glyphicon-plus"></span> 加关注</a>
+        <a class="label label-success"><span class="glyphicon glyphicon-home"></span> 发私信</a>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div>访问：N/A</div>
+      <div>积分：N/A</div>
+      <div>等级：<span class="badge">BLOG</span></div>
+      <div>排名：千里之外</div>
+    </li>
+    <li class="list-group-item">
+      <table>
+        <tbody>
+          <tr><td>原创：{{site.posts.size}}</td><td>转载：N/A</td></tr>
+          <tr><td>译文：N/A</td><td>评论：N/A</td></tr>
+        </tbody>
+      </table>
+    </li>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">文章搜索</div>
+  <div class="panel-body">
+    <div class="input-group">
+      <input type="text" class="form-control"/>
+      <span class="form-control-feedback glyphicon glyphicon-search" aria-hidden="true"></span>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">文章分类</div>
+  <div class="panel-body list-unstyled">
+{% for category in site.categories %}
+    <li><a href="{{ category | first | prepend: '/category/' | relative_url }}" class="nounderline">{{ category | first }}</a> ({{category[1].size}})</li>
+{% endfor %}
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">文章标签</div>
+  <div class="panel-body list-group">
+{% for tag in site.tags %}
+    <a href="{{ tag | first | prepend: '/tag/' | relative_url }}" class="list-group-item">
+      {{ tag | first }}<span class="badge">{{ tag[1].size }}</span>
+    </a>
+{% endfor %}
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">文章存档</div>
+  <div class="panel-body">
+    Panel content
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">阅读排行</div>
+  <div class="panel-body">
+    Panel content
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">评论排行</div>
+  <div class="panel-body">
+    Panel content
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">推荐文章</div>
+  <div class="panel-body">
+    Panel content
+  </div>
+</div>

@@ -71,7 +71,6 @@
           <ul class="dropdown-menu" aria-labelledby="nav-menu">
             <li><a href="{{ '/category' | relative_url }}">Categories</a></li>
             <li><a href="{{ '/tag' | relative_url }}">Tags</a></li>
-            <li class="disabled"><a>Placeholder</a></li>
           </ul>
         </li>
       </ul>
@@ -110,8 +109,17 @@
 </div>
 
 <div class="container">
-  {{ content }}
+  <div class="row">
+    <div class="container col-md-3 visible-lg-block">
+{% include sidebar.html %}
+    </div>
+    <div class="container col-md-9">
+      {{ content }}
+    </div>
+  </div>
 </div>
+
+
 
 {% include footer.html %}
   </body>
