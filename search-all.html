@@ -1,0 +1,28 @@
+---
+layout: csdn
+title: "Search All"
+---
+<div class="panel panel-default">
+  <div class="panel-heading">搜索</div>
+  <div class="panel-body">
+    <div class="input-group search-container col-md-12">
+      <input id="post-search" type="text" class="form-control"/>
+      <span class="form-control-feedback glyphicon glyphicon-search" aria-hidden="true"></span>
+    </div>
+    <div class="list-group">
+      <div id="post-search-result"></div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+SimpleJekyllSearch({
+  searchInput: document.getElementById('post-search'),
+  resultsContainer: document.getElementById('post-search-result'),
+  json: '{{site.baseurl}}/search_all.json',
+  searchResultTemplate: '<div class="list-group-item"><a href="{url}" title="{desc}">{title}</a></div>',
+  noResultsText: '<div class="list-group"><div class="list-group-item">No results found</div></div>',
+  limit: 999,
+  fuzzy: false,
+})
+</script>
