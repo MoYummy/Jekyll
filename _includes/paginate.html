@@ -8,10 +8,6 @@
         <span class="glyphicon glyphicon-backward" aria-hidden="true"></span>
       </a>
     </li>
-    {% else %}
-    <li class="disabled">
-      <span class="glyphicon glyphicon-backward" ></span>
-    </li>
     {% endif %}
 
     {% for page in (1..paginator.total_pages) %}
@@ -21,7 +17,7 @@
     </li>
       {% elsif page == 1 %}
     <li>
-      <a href="{{ paginator.previous_page_path | relative_url }}">{{ page }}</a>
+      <a href="{{ '/' | relative_url }}">{{ page }}</a>
     </li>
       {% else %}
     <li>
@@ -40,13 +36,6 @@
       <a href="{{ site.paginate_path | relative_url | replace: ':num', paginator.total_pages }}" aria-label="Last">
         <span class="glyphicon glyphicon-step-forward"></span>
       </a>
-    </li>
-    {% else %}
-    <li class="disabled">
-      <span class="glyphicon glyphicon-forward"></span>
-    </li>
-    <li class="disabled">
-      <span class="glyphicon glyphicon-step-forward"></span>
     </li>
     {% endif %}
 
