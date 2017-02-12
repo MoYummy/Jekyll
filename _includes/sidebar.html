@@ -5,25 +5,25 @@
       <a href="{{'/'|relative_url}}" class="thumbnail">
         <img src="{{ '/assets/logo.png' | relative_url }}" alt="{{site.data.author.name}}">
       </a>
-      <div>{{site.data.author.name}}</div>
-      <div>
+      <div class="text-center">{{site.data.author.name}}</div>
+      <div class="text-center">
         <a href="https://github.com/{{site.data.author.github}}/{{site.data.author.repo}}" class="label label-success"><span class="glyphicon glyphicon-plus"></span> 加关注</a>
         <a class="label label-success"><span class="glyphicon glyphicon-home"></span> 发私信</a>
       </div>
     </li>
     <li class="list-group-item">
-      <div>访问：N/A</div>
-      <div>积分：N/A</div>
-      <div>等级：<span class="badge">BLOG</span></div>
-      <div>排名：千里之外</div>
+      <div class="row"><div class="col-md-12">访问：N/A</div></div>
+      <div class="row"><div class="col-md-12">积分：N/A</div></div>
+      <div class="row"><div class="col-md-12">等级：<span class="badge">BLOG</span></div></div>
+      <div class="row"><div class="col-md-12">排名：千里之外</div></div>
     </li>
     <li class="list-group-item">
-      <table>
-        <tbody>
-          <tr><td>原创：{{site.posts.size}}</td><td>转载：N/A</td></tr>
-          <tr><td>译文：N/A</td><td>评论：N/A</td></tr>
-        </tbody>
-      </table>
+      <div class="row">
+        <div class="col-md-6">原创：{{site.posts.size}}</div><div class="col-md-6">转载：N/A</div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">译文：N/A</div><div class="col-md-6">评论：N/A</div>
+      </div>
     </li>
   </div>
 </div>
@@ -59,24 +59,20 @@
 <div class="panel panel-default">
   <div class="panel-heading">文章存档</div>
   <div class="panel-body">
-    Panel content
   </div>
 </div>
 <div class="panel panel-default">
   <div class="panel-heading">阅读排行</div>
   <div class="panel-body">
-    Panel content
   </div>
 </div>
 <div class="panel panel-default">
   <div class="panel-heading">评论排行</div>
   <div class="panel-body">
-    Panel content
   </div>
 </div>
 <div class="panel panel-default">
   <div class="panel-heading">推荐文章</div>
   <div class="panel-body">
-    Panel content
   </div>
 </div>

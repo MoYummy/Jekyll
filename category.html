@@ -3,9 +3,9 @@ layout: csdn
 title: "Category"
 ---
 <div class="list-group">
-  {% for category in site.categories %}
-    <div class="list-group-item row">
-      <div class="col-md-12"><a class="label label-info" href="{{ category | first | prepend: '/category/' | relative_url }}">{{ category | first }}</a></div>
-    </div>
-  {% endfor %}
+{% for category in site.categories %}
+  <div class="list-group-item row">
+    <div class="col-md-12"><a class="label label-info" href="{{ category | first | prepend: '/category/' | relative_url }}">{{ category | first }}</a></div>
+  </div>
+{% endfor %}
 </div>

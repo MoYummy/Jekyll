@@ -17,12 +17,12 @@ layout: csdn
         <div class="col-md-6">
           <span class="glyphicon glyphicon-list"></span> 分类：
 {% for category in page.categories %}
-          <a class="label label-info" href="{{ category | prepend: '/category/' | relative_url }}">{{ category }} ({{ category.size }})</a>
+          <a class="label label-info" href="{{ category | prepend: '/category/' | relative_url }}">{{ category }} ({{ site.categories[category].size }})</a>
 {% endfor %}
         </div>
         <div class="col-md-6">标签：
 {% for tag in page.tags %}
-        <a class="label label-info" href="{{ tag | prepend: '/tag/' | relative_url }}">{{ tag }} ({{ tag.size }})</a>
+        <a class="label label-info" href="{{ tag | prepend: '/tag/' | relative_url }}">{{ tag }} ({{ site.tags[tag].size }})</a>
 {% endfor %}
         </div>
       </div>

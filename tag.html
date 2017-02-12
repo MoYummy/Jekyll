@@ -1,11 +1,11 @@
 ---
 layout: csdn
-titile: "Tag"
+title: "Tag"
 ---
 <div class="list-group">
-  {% for tag in site.tags %}
-    <div class="list-group-item row">
-      <div class="col-md-12"><a class="label label-info" href="{{ tag | first | prepend: '/tag/' | relative_url }}">{{ tag | first }}</a></div>
-    </div>
-  {% endfor %}
+{% for tag in site.tags %}
+  <div class="list-group-item row">
+    <div class="col-md-12"><a class="label label-info" href="{{ tag | first | prepend: '/tag/' | relative_url }}">{{ tag | first }}</a></div>
+  </div>
+{% endfor %}
 </div>

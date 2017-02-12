@@ -3,14 +3,23 @@ layout: csdn
 title: "Archive"
 ---
 <div class="list-group">
-  {% for post in site.posts %}
-    <div class="list-group-item row">
-      <div class="col-md-7"><a href="{{ post.url | relative_url }}" class="nounderline">{{ post.title }}</a></div>
-      <div class="col-md-2">{{ post.date | date_to_string }}</div>
-      <div class="col-md-3">
-        <span class="glyphicon glyphicon-search"></span> <a href="{{ post.url | relative_url }}">阅读 <span class="badge">100</span></a>
-        <span class="glyphicon glyphicon-comment"></span> 评论 <span class="badge">100</span>
-      </div>
+{% for post in site.posts %}
+  <div class="list-group-item">
+    <div class="col-md-6">
+{% if post.tags contains 'original' %}
+      <span class="glyphicon glyphicon-user"></span>
+{% elsif post.tags contains 'share' %}
+      <span class="glyphicon glyphicon-share"></span>
+{% else %}
+      <span class="glyphicon glyphicon-file"></span>
+{% endif %}
+      <a href="{{ post.url | relative_url }}" class="nounderline">{{ post.title }}</a>
     </div>
-  {% endfor %}
+    <div class="text-right">
+      <span class="date">{{ post.date | date_to_string }}</span>
+      <span class="glyphicon glyphicon-search"></span> <a href="{{ post.url | relative_url }}" class="nounderline">阅读</a> (100)
+      <span class="glyphicon glyphicon-comment"></span> 评论 (100)
+    </div>
+  </div>
+{% endfor %}
 </div>

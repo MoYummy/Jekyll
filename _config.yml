@@ -36,7 +36,7 @@ limit_posts: 0
 #incremental: BOOL
 profile: false
 permalink: /:year/:month/:day/:title/
-paginate: 4
+paginate: 10
 paginate_path: "page/:num"
 
 # Service
