@@ -32,11 +32,18 @@
   <div class="panel-heading">文章搜索</div>
   <div class="panel-body">
     <div class="input-group">
-      <input type="text" class="form-control"/>
-      <span class="form-control-feedback glyphicon glyphicon-search" aria-hidden="true"></span>
+      <input id="sidebar-post-search" type="text" class="form-control">
+      <span class="input-group-btn">
+        <button class="btn btn-default" href="{{'/search' | relative_url}}"><span class="glyphicon glyphicon-search" onclick="openSearch()"></span></button>
+      </span>
     </div>
   </div>
 </div>
+<script type="text/javascript">
+function openSearch() {
+  top.location.href = "{{'/search' | relative_url}}?q=" + document.getElementById("sidebar-post-search").value
+}
+</script>
 
 <div class="panel panel-default">
   <div class="panel-heading">文章分类</div>

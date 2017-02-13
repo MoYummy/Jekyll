@@ -16,6 +16,11 @@ title: "Search"
 </div>
 
 <script type="text/javascript">
+var matched = document.location.href.match(/(\?|\&)q=([^\&\#]*)(\&|\#|$)/);
+if (matched != null) document.getElementById('post-search').value = unescape(matched[2])
+</script>
+
+<script type="text/javascript">
 SimpleJekyllSearch({
   searchInput: document.getElementById('post-search'),
   resultsContainer: document.getElementById('post-search-result'),
