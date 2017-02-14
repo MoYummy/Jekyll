@@ -14,8 +14,8 @@
     <div>{{ post.excerpt | strip_html }}</div>
     <div class="text-right">
       <span class="date">{{ post.date | date_to_string }}</span>
-      <span class="glyphicon glyphicon-search"></span> <a href="{{ post.url | relative_url }}" class="nounderline">阅读</a> (100)
-      <span class="glyphicon glyphicon-comment"></span> 评论 (100)
+      <span class="glyphicon glyphicon-search"></span> <a href="{{ post.url | relative_url }}" class="nounderline">View</a> (100)
+      <span class="glyphicon glyphicon-comment"></span> Comment (100)
     </div>
   </div>
 {% endfor %}

@@ -8,19 +8,19 @@ layout: csdn
       <div class="row">
         <div class="text-right col-md-12">
           {{ page.date | date_to_string }}
-          <span class="glyphicon glyphicon-search"></span> 100人阅读
-          <span class="glyphicon glyphicon-comment"></span> 评论(100)
-          <a href="#">收藏</a> <a href="#">举报</a>
+          <span class="glyphicon glyphicon-search"></span> 100 views
+          <span class="glyphicon glyphicon-comment"></span> Comment(100)
+          <a href="#">Like</a> <a href="#">Report</a>
         </div>
       </div>
       <div class="row">
         <div class="col-md-6">
-          <span class="glyphicon glyphicon-list"></span> 分类：
+          <span class="glyphicon glyphicon-list"></span> Category:
 {% for category in page.categories %}
           <a class="label label-info" href="{{ category | prepend: '/category/' | relative_url }}">{{ category }} ({{ site.categories[category].size }})</a>
 {% endfor %}
         </div>
-        <div class="col-md-6">标签：
+        <div class="col-md-6">Tag:
 {% for tag in page.tags %}
         <a class="label label-info" href="{{ tag | prepend: '/tag/' | relative_url }}">{{ tag }} ({{ site.tags[tag].size }})</a>
 {% endfor %}
@@ -35,13 +35,13 @@ layout: csdn
     <ul class="list-group-item list-unstyled">
 {% if page.previous %}
       <li><a href="{{page.previous.url|relative_url}}" class="nounderline">
-        <span class="badge"><span class="glyphicon glyphicon-menu-up"></span> 上一篇 </span> {{page.previous.title}}
+        <span class="badge"><span class="glyphicon glyphicon-menu-up"></span> Previous </span> {{page.previous.title}}
       </a></li>
 {% endif %}
 
 {% if page.next %}
       <li><a href="{{page.next.url|relative_url}}" class="nounderline">
-        <span class="badge"><span class="glyphicon glyphicon-menu-down"></span> 下一篇 </span> {{page.next.title}}
+        <span class="badge"><span class="glyphicon glyphicon-menu-down"></span> Next </span> {{page.next.title}}
       </a></li>
 {% endif %}
     </ul>
