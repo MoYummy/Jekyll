@@ -1,0 +1,22 @@
+<div class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#csdn-navbar-second" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div id="csdn-navbar-second" class="collapse navbar-collapse">
+      <form class="navbar-form navbar-right">
+        <a class="btn btn-primary" href="{{'/archive' | relative_url}}"><span class="glyphicon glyphicon-th-list"></span> Archive</a>
+        <a class="btn btn-success" href="{{'/excerpt' | relative_url}}"><span class="glyphicon glyphicon-tasks"></span> Excerpt</a>
+        <a class="btn btn-info" href="{{ '/feed.xml' | relative_url }}"><span class="badge">RSS</span> Feed</a>
+        <a class="btn btn-warning" href="#" disabled="disabled"><span class="glyphicon glyphicon-cog"></span> Admin</a>
+        <a class="btn btn-danger" href="#" disabled="disabled"><span class="glyphicon glyphicon-edit"></span> Post</a>
+      </form>
+    </div>
+  </div>
+</div>

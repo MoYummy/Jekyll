@@ -12,72 +12,7 @@
 <!-- fork me -->
 <a href="https://github.com/{{site.data.author.github}}/{{site.data.author.repo}}"><img style="position: absolute; top: 0; left: 0; border: 0; z-index: 9999" src="https://camo.githubusercontent.com/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png"></a>
 
-<!-- top navbar-->
-<div id="top" class="navbar navbar-inverse navbar-static-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#csdn-navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="{{'/' | relative_url}}">
-        <span class="glyphicon glyphicon-euro" aria-hidden="true"></span> Blog
-      </a>
-    </div>
-
-    <div id="csdn-navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a id="nav-search" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
-          <ul class="dropdown-menu" aria-labelledby="nav-search">
-            <li class="input-group">
-              <input type="text" class="form-control" placeholder="Search">
-              <span class="form-control-feedback glyphicon glyphicon-search" aria-hidden="true"></span>
-            </li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a id="nav-bookmark" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false"><span class="glyphicon glyphicon-star"></span></a>
-          <ul class="dropdown-menu" aria-labelledby="nav-bookmark">
-            <li class="disabled"><a>Placeholder</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a id="nav-notification" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false"><span class="glyphicon glyphicon-bell"></span><span class="badge">1</span></a>
-          <ul class="dropdown-menu" aria-labelledby="nav-notification">
-            <li class="disabled"><a>Placeholder</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a id="nav-action" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false"><span class="glyphicon glyphicon-edit"></span></a>
-          <ul class="dropdown-menu" aria-labelledby="nav-action">
-            <li class="disabled"><a href="#"><span class="glyphicon glyphicon-blackboard"></span> Upload PPT/Document</a></li>
-            <li class="disabled"><a href="#"><span class="glyphicon glyphicon-comment"></span> Ask question</a></li>
-            <li class="disabled"><a href="#"><span class="glyphicon glyphicon-edit"></span> Post</a></li>
-            <li class="disabled"><a href="#"><span class="glyphicon glyphicon-cloud-upload"></span> Upload</a></li>
-            <li class="disabled"><a href="#"><span class="glyphicon glyphicon-file"></span> Create project</a></li>
-            <li class="disabled"><a href="#"><span class="glyphicon glyphicon-console"></span> Create snippets</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a id="nav-user" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false"><span class="glyphicon glyphicon-user"></span></a>
-          <ul class="dropdown-menu" aria-labelledby="nav-user">
-            <li><a href="{{'/about' | relative_url}}">About</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a id="nav-menu" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
-          <ul class="dropdown-menu" aria-labelledby="nav-menu">
-            <li><a href="{{ '/category' | relative_url }}">Category</a></li>
-            <li><a href="{{ '/tag' | relative_url }}">Tag</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
+{% include topnav.html %}
 
 <div class="jumbotron">
   <div class="container">
@@ -85,29 +20,7 @@
   </div>
 </div>
 
-<!-- middle navbar-->
-<div class="navbar navbar-default" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#csdn-navbar-second" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-
-    <div id="csdn-navbar-second" class="collapse navbar-collapse">
-      <form class="navbar-form navbar-right">
-        <a class="btn btn-primary" href="{{'/archive' | relative_url}}"><span class="glyphicon glyphicon-th-list"></span> Archive</a>
-        <a class="btn btn-success" href="{{'/excerpt' | relative_url}}"><span class="glyphicon glyphicon-tasks"></span> Excerpt</a>
-        <a class="btn btn-info" href="{{ '/feed.xml' | relative_url }}"><span class="badge">RSS</span> Feed</a>
-        <a class="btn btn-warning" href="#" disabled="disabled"><span class="glyphicon glyphicon-cog"></span> Admin</a>
-        <a class="btn btn-danger" href="#" disabled="disabled"><span class="glyphicon glyphicon-edit"></span> Post</a>
-      </form>
-    </div>
-  </div>
-</div>
+{% include midnav.html %}
 
 <div class="container">
   <div class="row">
@@ -123,6 +36,11 @@
 
 
 <script src="{{'/js/csdn.js' | relative_url}}"></script>
+<script type="text/javascript">
+function openSearch() {
+  top.location.href = "{{'/search' | relative_url}}?q=" + document.getElementById("sidebar-post-search").value
+}
+</script>
 {% include footer.html %}
   </body>
 </html>

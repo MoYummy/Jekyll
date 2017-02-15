@@ -32,18 +32,13 @@
   <div class="panel-heading">Search</div>
   <div class="panel-body">
     <div class="input-group">
-      <input id="sidebar-post-search" type="text" class="form-control">
+      <input id="sidebar-post-search" type="text" class="form-control" disabled>
       <span class="input-group-btn">
         <button class="btn btn-default" href="{{'/search' | relative_url}}"><span class="glyphicon glyphicon-search" onclick="openSearch()"></span></button>
       </span>
     </div>
   </div>
 </div>
-<script type="text/javascript">
-function openSearch() {
-  top.location.href = "{{'/search' | relative_url}}?q=" + document.getElementById("sidebar-post-search").value
-}
-</script>
 
 <div class="panel panel-default">
   <div class="panel-heading">Category</div>
