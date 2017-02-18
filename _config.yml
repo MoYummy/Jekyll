@@ -1,6 +1,5 @@
 # Gems
 gems:
-  - jekyll-admin
   - jekyll-archives
   - jekyll-assets
   - jekyll-feed
