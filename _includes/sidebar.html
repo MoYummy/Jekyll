@@ -42,9 +42,11 @@
 
 <div class="panel panel-default">
   <div class="panel-heading">Category</div>
-  <div class="panel-body list-unstyled">
+  <div class="panel-body list-group">
 {% for category in site.categories %}
-    <li><a href="{{ category | first | prepend: '/category/' | relative_url }}" class="nounderline">{{ category | first }}</a> ({{category[1].size}})</li>
+    <a href="{{ category | first | prepend: '/category/' | relative_url }}" class="list-group-item">
+      {{ category | first }}<span class="badge">{{ category[1].size }}</span>
+    </a>
 {% endfor %}
   </div>
 </div>
@@ -60,7 +62,28 @@
 </div>
 <div class="panel panel-default">
   <div class="panel-heading">Archive</div>
-  <div class="panel-body">
+  <div class="panel-body list-group">
+{% for post in site.posts %}
+  {% assign c = 1 %}
+  {% if post.next == null %}
+    <a href="{{ post.date | date: '/%Y/%m'  | relative_url }}" class="list-group-item">
+      {{ post.date | date: '%b %Y' }}<span class="badge">{{ c }}</span>
+    </a>
+    {% continue %}
+  {% endif %}
+  {% capture cy %}{{ post.date | date: '%Y' }}{% endcapture %}
+  {% capture cm %}{{ post.date | date: '%b' }}{% endcapture %}
+  {% capture ny %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+  {% capture nm %}{{ post.next.date | date: '%b' }}{% endcapture %}
+  {% if cy == ny and cm == nm %}
+    {% assign c = c + 1 %}
+  {% else %}
+    <a href="{{ post.date | date: '/%Y/%m'  | relative_url }}" class="list-group-item">
+      {{ post.date | date: '%b %Y' }}<span class="badge">{{ c }}</span>
+    </a>
+    {% assign c = 1 %}
+  {% endif %}
+{% endfor %}
   </div>
 </div>
 <div class="panel panel-default">
