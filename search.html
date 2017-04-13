@@ -25,8 +25,8 @@ SimpleJekyllSearch({
   searchInput: document.getElementById('post-search'),
   resultsContainer: document.getElementById('post-search-result'),
   json: '{{site.baseurl}}/search.json',
-  searchResultTemplate: '<div class="list-group-item"><a href="{url}" title="{desc}">{title}</a></div>',
-  noResultsText: '<div class="list-group"><div class="list-group-item">No results found</div></div>',
+  searchResultTemplate: '<div class="list-group-separator"></div><div class="list-group-item"><div class="row-action-primary"><i class="material-icons">Post</i></div><div class="row-content"><a href="{url}" title="{desc}">{title}</a></div></div>',
+  noResultsText: '<div class="list-group-separator"></div><div class="list-group"><div class="list-group-item"><div class="row-action-primary"><i class="material-icons">Post</i></div><div class="row-content">No results found</div></div></div>',
   limit: 999,
   fuzzy: false,
 })

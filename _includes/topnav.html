@@ -1,4 +1,4 @@
-<div id="top" class="navbar navbar-inverse navbar-static-top" role="navigation">
+<div id="top" class="navbar navbar-default navbar-static-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#csdn-navbar" aria-expanded="false" aria-controls="navbar">
@@ -14,17 +14,7 @@
 
     <div id="csdn-navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a id="nav-search" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
-          <ul class="dropdown-menu" aria-labelledby="nav-search">
-            <li class="input-group">
-              <input id="sidebar-post-search" type="text" class="form-control" disabled>
-              <span class="input-group-btn">
-                <button class="btn btn-default" href="{{'/search' | relative_url}}"><span class="glyphicon glyphicon-search" onclick="openSearch()"></span></button>
-              </span>
-            </li>
-          </ul>
-        </li>
+        <li><a href="{{'/search' | relative_url}}"><span class="glyphicon glyphicon-search" onclick="openSearch()"></span></a></li>
         <li class="dropdown">
           <a id="nav-bookmark" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false"><span class="glyphicon glyphicon-star"></span></a>
           <ul class="dropdown-menu" aria-labelledby="nav-bookmark">
